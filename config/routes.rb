@@ -54,3 +54,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 end
+
+Hello::Application.routes.draw do
+  get ':controller(/:action(/:id(.:format)))'
+end
