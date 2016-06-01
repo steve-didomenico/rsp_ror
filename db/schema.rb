@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160601231824) do
+ActiveRecord::Schema.define(version: 20160601234103) do
 
   create_table "rooms", force: :cascade do |t|
     t.string   "building",    limit: 255
@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(version: 20160601231824) do
     t.string   "netid",      limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "users_semesters_rooms", id: false, force: :cascade do |t|
+    t.integer "user_id",     limit: 4
+    t.integer "semester_id", limit: 4
+    t.integer "room_id",     limit: 4
   end
 
 end
