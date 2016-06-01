@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :rooms
   resources :semesters
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.
@@ -58,6 +59,7 @@ Rails.application.routes.draw do
 end
 
 Hello::Application.routes.draw do
+  resources :rooms
   resources :semesters
   resources :users
   get ':controller(/:action(/:id(.:format)))'

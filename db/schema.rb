@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160601231337) do
+ActiveRecord::Schema.define(version: 20160601231824) do
+
+  create_table "rooms", force: :cascade do |t|
+    t.string   "building",    limit: 255
+    t.string   "room_number", limit: 255
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
   create_table "semesters", force: :cascade do |t|
     t.integer  "year",       limit: 4
