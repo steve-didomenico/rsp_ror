@@ -1,4 +1,4 @@
 class Semester < ActiveRecord::Base
-  has_and_belongs_to_many :users
-  has_and_belongs_to_many :rooms
+  has_many :users, :through => :users_semesters_rooms
+  has_many :rooms, :through => :users_semesters_rooms
 end
